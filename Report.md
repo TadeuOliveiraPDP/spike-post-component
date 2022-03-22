@@ -34,7 +34,7 @@ A categoria onde o Quill se encaixa é chamada **content editor**. Existem outro
 
 ### Escondendo a toolbar
 
-É para esconder a toolbar, basta setar o valor do campo ```tooltip``` em modules, no [construtor do objeto de Quill](https://quilljs.com/guides/how-to-customize-quill/).
+É possível esconder a toolbar, basta setar o valor do campo ```tooltip``` em modules, no [construtor do objeto de Quill](https://quilljs.com/guides/how-to-customize-quill/).
 
 **TODO**: verificar se isso funciona com ```Quill.register('modules/toolbar',false)``` dado que o objeto Quill já vem instanciado quando puxado por ```vue-quill-editor```.
 
@@ -42,9 +42,11 @@ A categoria onde o Quill se encaixa é chamada **content editor**. Existem outro
 
 #### Overview
 
-Nós precisamos fazer Web Scrapping para colher os dados de um recurso que serão usados para exibir nosso preview, como título, descrição e thumbnail. No entanto, isso envolve acessar o recurso e possivelmente nos depararmos com erro de CORS. Devem haver [cuidados](https://www.scrapehero.com/how-to-prevent-getting-blacklisted-while-scraping/) para que consigamos fazer isso sem sermos bloqueados por alguma ferramenta anti-scraping.
+Nós precisamos fazer [Web Scrapping](https://www.gocache.com.br/seguranca/o-que-e-web-scraping-para-iniciantes/) para colher os dados de um recurso que serão usados para exibir nosso preview, como título, descrição e thumbnail. No entanto, isso envolve acessar o recurso e possivelmente nos depararmos com erro de [CORS](https://dev.to/lydiahallie/cs-visualized-cors-5b8h#cs-cors). Devem haver [cuidados](https://www.scrapehero.com/how-to-prevent-getting-blacklisted-while-scraping/) para que consigamos fazer isso sem sermos bloqueados por alguma ferramenta anti-scraping.
 
 Uma forma que deve ser efetiva de colher informação de sites não tão restritivos é os fazendo acreditar que eles estão sendo acessado de um web browser com o uso de uma ferramenta de automação. Em diversos projetos, para testes automatizados, nós usamos o Puppeteer, que justamente cumpre com essa função.
+
+Se o site acessado usa [metadados amigáveis](https://ogp.me/), é simples retirar as informações que precisamos. Mas nem sempre vai ser o caso, e o scraper vai ter que usar alguns critérios para extrair o que ele quer.
 
 #### Soluções prontas
 
@@ -56,7 +58,7 @@ Seguem algumas soluções prontas encontradas que fazem o scraping da página e 
 
 ### Uso de emojis
 
-Existe uma extensão do Quill chamada [Quill emoji](https://gshow.globo.com/) (**TODO**: testar isso). No entanto ela requer acesso através da toolbar, cuja ideia era de ser escondida. Se formos considerar ainda usar o quill, [é possível editar o estilo da toolbar](https://quilljs.com/guides/how-to-customize-quill/#themes) (**TODO**: buscar como fazer isso).
+Existe uma extensão do Quill chamada [Quill emoji](https://github.com/contentco/quill-emoji) (**TODO**: testar isso). No entanto ela requer acesso através da toolbar, cuja ideia era de ser escondida. Se formos considerar ainda usar o quill, [é possível editar o estilo da toolbar](https://quilljs.com/guides/how-to-customize-quill/#themes) (**TODO**: buscar como fazer isso).
 
 # Principais Referências
 
