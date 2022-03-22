@@ -56,9 +56,7 @@ Seguem algumas soluções prontas encontradas que fazem o scraping da página e 
 
 ### Uso de emojis
 
-Existe uma extensão do Quill chamada [Quill emoji](https://gshow.globo.com/).
-
-**TODO**: testar isso.
+Existe uma extensão do Quill chamada [Quill emoji](https://gshow.globo.com/) (**TODO**: testar isso). No entanto ela requer acesso através da toolbar, cuja ideia era de ser escondida. Se formos considerar ainda usar o quill, [é possível editar o estilo da toolbar](https://quilljs.com/guides/how-to-customize-quill/#themes) (**TODO**: buscar como fazer isso).
 
 # Principais Referências
 
